@@ -1,0 +1,22 @@
+{
+  "name": "goodoldbrowse",
+  "version": "1.0.0",
+  "description": "A browser that allows Adobe Flash",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KiaWeb/GoodOldBrowse.git"
+  },
+  "author": "Kia Kazemi <kia@anistick.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KiaWeb/GoodOldBrowse/issues"
+  },
+  "homepage": "https://github.com/KiaWeb/GoodOldBrowse#readme",
+  "devDependencies": {
+    "electron": "^11.5.0"
+  }
+}
