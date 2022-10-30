@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/KiaWeb/GoodOldBrowse#readme",
   "devDependencies": {
-    "electron": "^11.5.0"
+    "electron": "^11.5.0",
+    "electron-packager":"^15.4.0"
   }
 }
