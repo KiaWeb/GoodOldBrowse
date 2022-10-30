@@ -20,15 +20,12 @@ mm.append(new MenuItem ({
                b.loadURL('https://ultrasounds.com');
             }
          }));
-<<<<<<< HEAD
-=======
 mm.append(new MenuItem ({
             label: 'New Window',
             click() { 
                createWindow();
             }
          }));
->>>>>>> 89a788c (1.1.0)
 let pluginName;
 switch (process.platform) {
 	case "win32": {
@@ -44,12 +41,9 @@ switch (process.platform) {
 		break;
 	}
 }
-<<<<<<< HEAD
 if (env.NODE_ENV == "prod") {
 	pluginName = "./resources/"+pluginName;
 };
-=======
->>>>>>> 89a788c (1.1.0)
 app.commandLine.appendSwitch("ppapi-flash-path", path.join(__dirname, pluginName));
 app.commandLine.appendSwitch("ppapi-flash-version", "32.0.0.371");
 
@@ -82,8 +76,5 @@ app.on("window-all-closed", () => {
 });
 app.on("activate", () => {
 	if (mainWindow === null) createWindow();
-<<<<<<< HEAD
 });
-=======
 });
->>>>>>> 89a788c (1.1.0)
