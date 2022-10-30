@@ -41,9 +41,6 @@ switch (process.platform) {
 		break;
 	}
 }
-if (env.NODE_ENV == "prod") {
-	pluginName = "./resources/"+pluginName;
-};
 app.commandLine.appendSwitch("ppapi-flash-path", path.join(__dirname, pluginName));
 app.commandLine.appendSwitch("ppapi-flash-version", "32.0.0.371");
 
@@ -76,5 +73,4 @@ app.on("window-all-closed", () => {
 });
 app.on("activate", () => {
 	if (mainWindow === null) createWindow();
-});
 });
