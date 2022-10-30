@@ -22,7 +22,7 @@ mm.append(new MenuItem ({
          }));
 mm.append(new MenuItem ({
             label: 'New Window',
-            click() { 
+            click(a,b,c) { 
                createWindow();
             }
          }));
@@ -45,8 +45,27 @@ app.commandLine.appendSwitch("ppapi-flash-path", path.join(__dirname, pluginName
 app.commandLine.appendSwitch("ppapi-flash-version", "32.0.0.371");
 
 let mainWindow;
-const createWindow = () => {
+const createMWindow = () => {
 	mainWindow = new BrowserWindow({
+		width: 1200,
+		height: 700,
+		title: "GoodOldBrowse",
+		webPreferences: {
+			plugins: true,
+			contextIsolation: true
+		}
+	});
+	Menu.setApplicationMenu(mm);
+	env.MAIN_WINDOW_ID = mainWindow.id;
+	
+	mainWindow.loadURL('https://www.google.com');
+	mainWindow.on("closed", () => mainWindow = null);
+	if (env.NODE_ENV == "dev") {
+		mainWindow.webContents.openDevTools();
+	};
+};
+const createWindow = () => {
+	new BrowserWindow({
 		width: 1200,
 		height: 700,
 		title: "GoodOldBrowse",
@@ -66,7 +85,7 @@ const createWindow = () => {
 };
 
 app.whenReady().then(() => {
-	createWindow();
+	createMWindow();
 });
 app.on("window-all-closed", () => {
 	if (process.platform !== "darwin") app.quit();
