@@ -4,20 +4,20 @@ const mm = new Menu();
 const env = Object.assign(process.env,require("./env"))
 mm.append(new MenuItem ({
             label: 'Home',
-            click() { 
-               mainWindow.loadURL('https://www.google.com')
+            click(a,b,c) { 
+               b.loadURL('https://www.google.com')
             }
          }));
 mm.append(new MenuItem ({
             label: 'GitHub',
-            click() { 
-               mainWindow.loadURL('https://github.com/KiaWeb/GoodOldBrowse');
+            click(a,b,c) { 
+               b.loadURL('https://github.com/KiaWeb/GoodOldBrowse');
             }
          }));
 mm.append(new MenuItem ({
             label: 'Flash Test',
-            click() { 
-               mainWindow.loadURL('https://ultrasounds.com');
+            click(a,b,c) { 
+               b.loadURL('https://ultrasounds.com');
             }
          }));
 let pluginName;
