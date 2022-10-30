@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
 	"test": "electron .",
-    "build": "electron-packager ./ --platform=win32 --overwrite"
+    "build": "electron-packager ./ --platform=win32 --overwrite --icon=favicon.ico"
   },
   "repository": {
     "type": "git",
